@@ -1,0 +1,69 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen-hla-r4> a fhir:Specimen;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "specimen-hla-r4"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/specimen";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/specimen>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <pre>buccal swab: 001-123456789 </pre>\n        </div>"
+  ];
+  fhir:Specimen.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://specimensrus.com" ];
+     fhir:Identifier.value [ fhir:value "001^123456789" ]
+  ];
+  fhir:Specimen.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:258564008;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "258564008" ];
+       fhir:Coding.display [ fhir:value "Buccal smear sample" ]
+     ]
+  ];
+  fhir:Specimen.subject [
+     fhir:Reference.display [ fhir:value "001^123456789" ]
+  ];
+  fhir:Specimen.receivedTime [ fhir:value "2018-05-01"^^xsd:date];
+  fhir:Specimen.collection [
+     fhir:Specimen.collection.method [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:418622002;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "418622002" ];
+         fhir:Coding.display [ fhir:value "Taking oral swab (procedure)" ]
+       ]
+     ];
+     fhir:Specimen.collection.bodySite [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:261063000;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "261063000" ];
+         fhir:Coding.display [ fhir:value "Buccal space" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen-hla-r4.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/uv/genomics-reporting/Specimen/specimen-hla-r4.ttl> .
+
+# -------------------------------------------------------------------------------------
+

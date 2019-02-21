@@ -1,0 +1,1990 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/genomics-reporting/Bundle/diagnosticreport-cgexample> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "diagnosticreport-cgexample"];
+  fhir:Bundle.type [ fhir:value "collection"];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/DiagnosticReport/report" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/DiagnosticReport/report>
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Patient/patient" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen>
+  ], [
+     fhir:index 3;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Organization/lab" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>
+  ], [
+     fhir:index 4;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/DiagnosticRequest/request" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/DiagnosticRequest/request>
+  ], [
+     fhir:index 5;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/overall-interp" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/overall-interp>
+  ], [
+     fhir:index 6;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/deletion-dup-overall" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/deletion-dup-overall>
+  ], [
+     fhir:index 7;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/iscn" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/iscn>
+  ], [
+     fhir:index 8;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/discrete-variant" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/discrete-variant>
+  ], [
+     fhir:index 9;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/dis-path" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/dis-path>
+  ], [
+     fhir:index 10;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/complex-variant" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/complex-variant>
+  ], [
+     fhir:index 11;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/complex-dis-path" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/complex-dis-path>
+  ], [
+     fhir:index 12;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/complex-component-D" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/complex-component-D>
+  ], [
+     fhir:index 13;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/complex-component-E" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/complex-component-E>
+  ], [
+     fhir:index 14;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/pharmPanel" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/pharmPanel>
+  ], [
+     fhir:index 15;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/haplotype" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/haplotype>
+  ], [
+     fhir:index 16;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/genotype" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/genotype>
+  ], [
+     fhir:index 17;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/metab" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/metab>
+  ], [
+     fhir:index 18;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/efficacy" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/efficacy>
+  ], [
+     fhir:index 19;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/highrisk" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/highrisk>
+  ], [
+     fhir:index 20;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Task/usage" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Task/usage>
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/DiagnosticReport/report> a fhir:DiagnosticReport;
+  fhir:Resource.id [ fhir:value "report"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnosticreport";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnosticreport>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:DiagnosticReport.basedOn [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/DiagnosticRequest/request>;
+     fhir:Reference.reference [ fhir:value "DiagnosticRequest/request" ]
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:81247-9;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "81247-9" ]
+     ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2016"^^xsd:gYear];
+  fhir:DiagnosticReport.issued [ fhir:value "2016-09-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:DiagnosticReport.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/overall-interp>;
+     fhir:Reference.reference [ fhir:value "Observation/overall-interp" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/deletion-dup-overall>;
+     fhir:Reference.reference [ fhir:value "Observation/deletion-dup-overall" ]
+  ], [
+     fhir:index 2;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/iscn>;
+     fhir:Reference.reference [ fhir:value "Observation/iscn" ]
+  ], [
+     fhir:index 3;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/discrete-variant>;
+     fhir:Reference.reference [ fhir:value "Observation/discrete-variant" ]
+  ], [
+     fhir:index 4;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/dis-path>;
+     fhir:Reference.reference [ fhir:value "Observation/dis-path" ]
+  ], [
+     fhir:index 5;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/complex-variant>;
+     fhir:Reference.reference [ fhir:value "Observation/complex-variant" ]
+  ], [
+     fhir:index 6;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/complex-dis-path>;
+     fhir:Reference.reference [ fhir:value "Observation/complex-dis-path" ]
+  ], [
+     fhir:index 7;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/pharmPanel>;
+     fhir:Reference.reference [ fhir:value "Observation/pharmPanel" ]
+  ];
+  fhir:DiagnosticReport.presentedForm [
+     fhir:index 0;
+     fhir:Attachment.contentType [ fhir:value "text/plain" ];
+     fhir:Attachment.data [ fhir:value "UHV0IHRoZSByZXBvcnQgdGV4dCBoZXJlIC0gbWltZS1lbmNvZGVk"^^xsd:base64Binary ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/DiagnosticRequest/request> a fhir:uv, fhir:ServiceRequest;
+  fhir:Resource.id [ fhir:value "request"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/servicerequest";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/servicerequest>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:ServiceRequest.status [ fhir:value "active"];
+  fhir:ServiceRequest.intent [ fhir:value "original-order"];
+  fhir:ServiceRequest.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:81247-9;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "81247-9" ]
+     ]
+  ];
+  fhir:ServiceRequest.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:ServiceRequest.reasonCode [
+     fhir:index 0;
+     fhir:CodeableConcept.text [ fhir:value "Worried about family planning" ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Patient/patient> a fhir:uv, fhir:Patient;
+  fhir:Resource.id [ fhir:value "patient"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This would contain patient identifiers, demographics, etc.</div>"
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Organization/lab> a fhir:uv, fhir:Organization;
+  fhir:Resource.id [ fhir:value "lab"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Organization.name [ fhir:value "Some lab"] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/overall-interp> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "overall-interp"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-overall";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-overall>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "LAB" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:51968-6;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "51968-6" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2016"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2016-09-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA6576-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA6576-8" ];
+       fhir:Coding.display [ fhir:value "Positive" ]
+     ], [
+       fhir:index 1;
+       a sct:10828004;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "10828004" ];
+       fhir:Coding.display [ fhir:value "Positive" ]
+     ]
+  ];
+  fhir:Observation.specimen [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen>;
+     fhir:Reference.reference [ fhir:value "Specimen/specimen" ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/deletion-dup-overall> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "deletion-dup-overall"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-deletion-dup";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-deletion-dup>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:83006-7;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "83006-7" ];
+       fhir:Coding.display [ fhir:value "Deletion-duplication overall interpretation" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2016"^^xsd:gYear];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA26803-9;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA26803-9" ];
+       fhir:Coding.display [ fhir:value "No deletion or duplication detected in studied region" ]
+     ]
+  ];
+  fhir:Observation.specimen [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen>;
+     fhir:Reference.reference [ fhir:value "Specimen/specimen" ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/iscn> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "iscn"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-cytogenetic-nomenclature";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-cytogenetic-nomenclature>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:81291-7;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "81291-7" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2016"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2016-09-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://example.org/icsn" ];
+       fhir:Coding.code [ fhir:value "???" ]
+     ]
+  ];
+  fhir:Observation.specimen [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen>;
+     fhir:Reference.reference [ fhir:value "Specimen/specimen" ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/discrete-variant> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "discrete-variant"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-described-variant";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-described-variant>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:TBD-DESCRIBED;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "TBD-Described" ];
+       fhir:Coding.display [ fhir:value "Genetic variant assessment" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2016"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2016-09-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA9633-4;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA9633-4" ];
+       fhir:Coding.display [ fhir:value "Present" ]
+     ]
+  ];
+  fhir:Observation.specimen [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen>;
+     fhir:Reference.reference [ fhir:value "Specimen/specimen" ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81252-9;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81252-9" ];
+         fhir:Coding.display [ fhir:value "Discrete genetic variant" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/clinvar" ];
+         fhir:Coding.version [ fhir:value "???" ];
+         fhir:Coding.code [ fhir:value "30880" ];
+         fhir:Coding.display [ fhir:value "NM_014049.4(ACAD9):c.1249C>T (p.Arg417Cys)" ]
+       ], [
+         fhir:index 1;
+         fhir:Coding.system [ fhir:value "http://example.org/cigar" ];
+         fhir:Coding.code [ fhir:value "tbd" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48018-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48018-6" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/hgnc" ];
+         fhir:Coding.code [ fhir:value "21497" ];
+         fhir:Coding.display [ fhir:value "ACAD9" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81293-3;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81293-3" ]
+       ]
+     ];
+     fhir:Observation.component.valueString [ fhir:value "All coding regions and appropriate flanking regions" ]
+  ], [
+     fhir:index 3;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:51958-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "51958-7" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/RefSeq-T" ];
+         fhir:Coding.code [ fhir:value "NM_014049.4" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48013-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48013-7" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/RefSeq-G" ];
+         fhir:Coding.code [ fhir:value "NG_017064.1" ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81290-9;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81290-9" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/HGVS.g" ];
+         fhir:Coding.version [ fhir:value "15.11" ];
+         fhir:Coding.code [ fhir:value "NC_000003.11:g.128625063C>T" ]
+       ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81255-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81255-2" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/dbsnp" ];
+         fhir:Coding.version [ fhir:value "137" ];
+         fhir:Coding.code [ fhir:value "rs368949613" ]
+       ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48004-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48004-6" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/HGVS.c" ];
+         fhir:Coding.version [ fhir:value "15.11" ];
+         fhir:Coding.code [ fhir:value "c.1249C>T" ]
+       ]
+     ]
+  ], [
+     fhir:index 8;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48005-3;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48005-3" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/HGVS.p" ];
+         fhir:Coding.version [ fhir:value "15.11" ];
+         fhir:Coding.code [ fhir:value "p.Arg417Cys" ]
+       ]
+     ]
+  ], [
+     fhir:index 9;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48019-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48019-4" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:LA6690-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA6690-7" ];
+         fhir:Coding.display [ fhir:value "Substitution" ]
+       ]
+     ]
+  ], [
+     fhir:index 10;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48006-1;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48006-1" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:LA6698-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA6698-0" ];
+         fhir:Coding.display [ fhir:value "Missense" ]
+       ]
+     ]
+  ], [
+     fhir:index 11;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:69547-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "69547-8" ]
+       ]
+     ];
+     fhir:Observation.component.valueString [ fhir:value "C" ]
+  ], [
+     fhir:index 12;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81254-5;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81254-5" ]
+       ]
+     ];
+     fhir:Observation.component.valueRange [
+       fhir:Range.low [
+         fhir:Quantity.value [ fhir:value "31731"^^xsd:decimal ]
+       ];
+       fhir:Range.high [
+         fhir:Quantity.value [ fhir:value "31731"^^xsd:decimal ]
+       ]
+     ]
+  ], [
+     fhir:index 13;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:69551-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "69551-0" ]
+       ]
+     ];
+     fhir:Observation.component.valueString [ fhir:value "T" ]
+  ], [
+     fhir:index 14;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48001-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48001-2" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/Chrom-Loc" ];
+         fhir:Coding.code [ fhir:value "3q21" ]
+       ]
+     ]
+  ], [
+     fhir:index 15;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48002-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48002-0" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:LA6683-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA6683-2" ];
+         fhir:Coding.display [ fhir:value "Germline" ]
+       ]
+     ]
+  ], [
+     fhir:index 16;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:53034-5;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "53034-5" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:LA6706-1;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA6706-1" ];
+         fhir:Coding.display [ fhir:value "Heterozygous" ]
+       ]
+     ]
+  ], [
+     fhir:index 17;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81258-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81258-6" ]
+       ]
+     ];
+     fhir:Observation.component.valueQuantity [
+       fhir:Quantity.value [ fhir:value "47"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "%" ]
+     ]
+  ], [
+     fhir:index 18;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:82121-5;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "82121-5" ]
+       ]
+     ];
+     fhir:Observation.component.valueQuantity [
+       fhir:Quantity.value [ fhir:value "208"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "1" ]
+     ]
+  ], [
+     fhir:index 19;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:82120-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "82120-7" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:LA26814-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA26814-6" ];
+         fhir:Coding.display [ fhir:value "1st set of variants in cis relation to each other" ]
+       ]
+     ]
+  ], [
+     fhir:index 20;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:82309-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "82309-6" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:LA6429-3;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA6429-3" ];
+         fhir:Coding.display [ fhir:value "Inferred from population data" ]
+       ]
+     ]
+  ], [
+     fhir:index 21;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:82155-3;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "82155-3" ]
+       ]
+     ];
+     fhir:Observation.component.valueQuantity [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "1" ]
+     ]
+  ], [
+     fhir:index 22;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81299-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81299-0" ]
+       ]
+     ];
+     fhir:Observation.component.valueQuantity [
+       fhir:Quantity.value [ fhir:value "0.48"^^xsd:decimal ]
+     ]
+  ], [
+     fhir:index 23;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81300-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81300-6" ]
+       ]
+     ];
+     fhir:Observation.component.valueQuantity [
+       fhir:Quantity.value [ fhir:value "1396929"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "1" ]
+     ]
+  ], [
+     fhir:index 24;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81301-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81301-4" ]
+       ]
+     ];
+     fhir:Observation.component.valueRange [
+       fhir:Range.low [
+         fhir:Quantity.value [ fhir:value "13200589"^^xsd:decimal ]
+       ];
+       fhir:Range.high [
+         fhir:Quantity.value [ fhir:value "15592000"^^xsd:decimal ]
+       ]
+     ]
+  ], [
+     fhir:index 25;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81302-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81302-2" ]
+       ]
+     ];
+     fhir:Observation.component.valueRange [
+       fhir:Range.low [
+         fhir:Quantity.value [ fhir:value "14184616"^^xsd:decimal ]
+       ];
+       fhir:Range.high [
+         fhir:Quantity.value [ fhir:value "15581544"^^xsd:decimal ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/dis-path> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "dis-path"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-inh-dis-path";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-inh-dis-path>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:53037-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "53037-8" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2016"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2016-09-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA6668-3;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA6668-3" ];
+       fhir:Coding.display [ fhir:value "Pathogenic" ]
+     ]
+  ];
+  fhir:Observation.derivedFrom [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/discrete-variant>;
+     fhir:Reference.reference [ fhir:value "Observation/discrete-variant" ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81259-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81259-4" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/MedGen-Dis" ];
+         fhir:Coding.code [ fhir:value "C1970173" ];
+         fhir:Coding.display [ fhir:value "Acyl-CoA dehydrogenase family, member 9, deficiency of" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/complex-variant> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "complex-variant"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-complex-variant";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-complex-variant>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:69548-6;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "69548-6" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2016"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2016-09-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA9633-4;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA9633-4" ];
+       fhir:Coding.display [ fhir:value "Present" ]
+     ]
+  ];
+  fhir:Observation.specimen [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen>;
+     fhir:Reference.reference [ fhir:value "Specimen/specimen" ]
+  ];
+  fhir:Observation.hasMember [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/complex-component-D>;
+     fhir:Reference.reference [ fhir:value "Observation/complex-component-D" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/complex-component-E>;
+     fhir:Reference.reference [ fhir:value "Observation/complex-component-E" ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81260-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81260-2" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/clinvar" ];
+         fhir:Coding.version [ fhir:value "???" ];
+         fhir:Coding.code [ fhir:value "16895" ];
+         fhir:Coding.display [ fhir:value "NM_000106.5(CYP2D):c.[886C>T;457G>C] – Haplotype" ]
+       ], [
+         fhir:index 1;
+         fhir:Coding.system [ fhir:value "http://example.org/hgvs" ];
+         fhir:Coding.code [ fhir:value "c.[886C>T;457G>C" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81263-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81263-6" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:LA26218-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA26218-0" ];
+         fhir:Coding.display [ fhir:value "Haplotype" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/complex-dis-path> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "complex-dis-path"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-inh-dis-path";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-inh-dis-path>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:53037-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "53037-8" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2016"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2016-09-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA6668-3;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA6668-3" ];
+       fhir:Coding.display [ fhir:value "Pathogenic" ]
+     ]
+  ];
+  fhir:Observation.derivedFrom [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/complex-variant>;
+     fhir:Reference.reference [ fhir:value "Observation/complex-variant" ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81259-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81259-4" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:293498008;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "293498008" ];
+         fhir:Coding.display [ fhir:value "Debrisoquine adverse reaction (disorder)" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/pharmPanel> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "pharmPanel"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-gen-panel";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-gen-panel>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-recommendedAction" ];
+     fhir:Extension.valueReference [
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Task/usage>;
+       fhir:Reference.reference [ fhir:value "Task/usage" ]
+     ]
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:TBD-PANEL;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "TBD-panel" ]
+     ], [
+       fhir:index 1;
+       a loinc:82118-1;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "82118-1" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2016"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2016-09-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:Observation.hasMember [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/haplotype>;
+     fhir:Reference.reference [ fhir:value "Observation/haplotype" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/genotype>;
+     fhir:Reference.reference [ fhir:value "Observation/genotype" ]
+  ], [
+     fhir:index 2;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/metab>;
+     fhir:Reference.reference [ fhir:value "Observation/metab" ]
+  ], [
+     fhir:index 3;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/efficacy>;
+     fhir:Reference.reference [ fhir:value "Observation/efficacy" ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen> a fhir:Specimen;
+  fhir:Resource.id [ fhir:value "specimen"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/specimen";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/specimen>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Specimen.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/complex-component-D> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "complex-component-D"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-described-variant";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-described-variant>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:TBD-DESCRIBED;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "TBD-Described" ];
+       fhir:Coding.display [ fhir:value "Genetic variant assessment" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2016"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2016-09-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA9633-4;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA9633-4" ];
+       fhir:Coding.display [ fhir:value "Present" ]
+     ]
+  ];
+  fhir:Observation.specimen [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen>;
+     fhir:Reference.reference [ fhir:value "Specimen/specimen" ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81252-9;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81252-9" ];
+         fhir:Coding.display [ fhir:value "Discrete genetic variant" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/clinvar" ];
+         fhir:Coding.version [ fhir:value "???" ];
+         fhir:Coding.code [ fhir:value "31934" ];
+         fhir:Coding.display [ fhir:value "NM_000106.5(CYP2D6):c.886C>T (p.Arg296Cys)" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81293-3;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81293-3" ]
+       ]
+     ];
+     fhir:Observation.component.valueString [ fhir:value "All coding regions and appropriate flanking regions" ]
+  ], [
+     fhir:index 2;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:51958-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "51958-7" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/RefSeq-T" ];
+         fhir:Coding.code [ fhir:value "NM_000106.5" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48004-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48004-6" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/HGVS.c" ];
+         fhir:Coding.version [ fhir:value "15.11" ];
+         fhir:Coding.code [ fhir:value "c.886C>T" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48005-3;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48005-3" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/HGVS.p" ];
+         fhir:Coding.version [ fhir:value "15.11" ];
+         fhir:Coding.code [ fhir:value "p.Arg296Cys" ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48019-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48019-4" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:LA6690-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA6690-7" ];
+         fhir:Coding.display [ fhir:value "Substitution" ]
+       ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48006-1;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48006-1" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:LA6698-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA6698-0" ];
+         fhir:Coding.display [ fhir:value "Missense" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/complex-component-E> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "complex-component-E"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-described-variant";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-described-variant>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ], [
+       fhir:index 1;
+       a loinc:LA26801-3;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA26801-3" ];
+       fhir:Coding.display [ fhir:value "Simple Variant" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:TBD-DESCRIBED;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "TBD-Described" ];
+       fhir:Coding.display [ fhir:value "Genetic variant assessment" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2016"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2016-09-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA9633-4;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA9633-4" ];
+       fhir:Coding.display [ fhir:value "Present" ]
+     ]
+  ];
+  fhir:Observation.specimen [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen>;
+     fhir:Reference.reference [ fhir:value "Specimen/specimen" ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81252-9;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81252-9" ];
+         fhir:Coding.display [ fhir:value "Discrete genetic variant" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/clinvar" ];
+         fhir:Coding.version [ fhir:value "???" ];
+         fhir:Coding.code [ fhir:value "38486" ];
+         fhir:Coding.display [ fhir:value "NM_000106.5(CYP2D6):c.1457G>C (p.Ser486Thr)" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81293-3;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81293-3" ]
+       ]
+     ];
+     fhir:Observation.component.valueString [ fhir:value "All coding regions and appropriate flanking regions" ]
+  ], [
+     fhir:index 2;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:51958-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "51958-7" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/RefSeq-T" ];
+         fhir:Coding.code [ fhir:value "NM_000106.5" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48004-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48004-6" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/HGVS.c" ];
+         fhir:Coding.version [ fhir:value "15.11" ];
+         fhir:Coding.code [ fhir:value "c.1457G>C" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Task/usage> a fhir:uv, fhir:Task;
+  fhir:Resource.id [ fhir:value "usage"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/task-med-chg";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/task-med-chg>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:MedicationStatement;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "med" ];
+     fhir:MedicationStatement.status [ fhir:value "unknown" ];
+     fhir:MedicationStatement.medicationCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm" ];
+         fhir:Coding.code [ fhir:value "11289" ];
+         fhir:Coding.display [ fhir:value "Warfarin" ]
+       ]
+     ];
+     fhir:MedicationStatement.subject [
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+       fhir:Reference.reference [ fhir:value "Patient/patient" ]
+     ]
+  ];
+  fhir:Task.status [ fhir:value "requested"];
+  fhir:Task.intent [ fhir:value "proposal"];
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA26423-6;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA26423-6" ];
+       fhir:Coding.display [ fhir:value "Increase dose" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "May need higher dosage than usual." ]
+  ];
+  fhir:Task.focus [
+     fhir:Reference.reference [ fhir:value "#med" ]
+  ];
+  fhir:Task.for [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Task.requester [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:Task.reasonReference [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/metab>;
+     fhir:Reference.reference [ fhir:value "Observation/metab" ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/haplotype> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "haplotype"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-haplotype";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-haplotype>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:84414-2;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "84414-2" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2016"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2016-09-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://example.org/???" ];
+       fhir:Coding.code [ fhir:value "*2" ]
+     ]
+  ];
+  fhir:Observation.specimen [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen>;
+     fhir:Reference.reference [ fhir:value "Specimen/specimen" ]
+  ];
+  fhir:Observation.derivedFrom [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/discrete-variant>;
+     fhir:Reference.reference [ fhir:value "Observation/discrete-variant" ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/genotype> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "genotype"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-genotype";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-genotype>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:84413-4;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "84413-4" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2016"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2016-09-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://www.pharmvar.org/" ];
+       fhir:Coding.code [ fhir:value "CYP2C9 *2/*5" ];
+       fhir:Coding.display [ fhir:value "CYP2C9 *2/*5" ]
+     ]
+  ];
+  fhir:Observation.specimen [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen>;
+     fhir:Reference.reference [ fhir:value "Specimen/specimen" ]
+  ];
+  fhir:Observation.derivedFrom [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/haplotype>;
+     fhir:Reference.reference [ fhir:value "Observation/haplotype" ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48018-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48018-6" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/hgnc" ];
+         fhir:Coding.code [ fhir:value "2623" ];
+         fhir:Coding.display [ fhir:value "CYP2C9" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48018-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48018-6" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/hgnc" ];
+         fhir:Coding.code [ fhir:value "23663" ];
+         fhir:Coding.display [ fhir:value "VKORC1" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/metab> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "metab"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-metabolism";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-metabolism>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:53040-2;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "53040-2" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2016"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2016-09-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA25390-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA25390-8" ];
+       fhir:Coding.display [ fhir:value "Rapid metabolizer" ]
+     ]
+  ];
+  fhir:Observation.derivedFrom [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/genotype>;
+     fhir:Reference.reference [ fhir:value "Observation/genotype" ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:51963-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "51963-7" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm" ];
+         fhir:Coding.code [ fhir:value "11289" ];
+         fhir:Coding.display [ fhir:value "Warfarin" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/efficacy> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "efficacy"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-efficacy";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-efficacy>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:51961-1;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "51961-1" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2016"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2016-09-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA6676-6;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA6676-6" ];
+       fhir:Coding.display [ fhir:value "Resistant" ]
+     ]
+  ];
+  fhir:Observation.derivedFrom [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/genotype>;
+     fhir:Reference.reference [ fhir:value "Observation/genotype" ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:51963-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "51963-7" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm" ];
+         fhir:Coding.code [ fhir:value "11289" ];
+         fhir:Coding.display [ fhir:value "Warfarin" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/highrisk> a fhir:Observation;
+  fhir:Resource.id [ fhir:value "highrisk"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-high-risk";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-high-risk>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:83009-1;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "83009-1" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2016"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2016-09-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA19542-2;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA19542-2" ];
+       fhir:Coding.display [ fhir:value "Low risk" ]
+     ]
+  ];
+  fhir:Observation.derivedFrom [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/genotype>;
+     fhir:Reference.reference [ fhir:value "Observation/genotype" ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:51963-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "51963-7" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm" ];
+         fhir:Coding.code [ fhir:value "11289" ];
+         fhir:Coding.display [ fhir:value "Warfarin" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/genomics-reporting/Bundle/diagnosticreport-cgexample.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/uv/genomics-reporting/Bundle/diagnosticreport-cgexample.ttl> .
+
+# -------------------------------------------------------------------------------------
+

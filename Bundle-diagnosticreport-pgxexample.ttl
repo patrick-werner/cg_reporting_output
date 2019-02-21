@@ -1,0 +1,924 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/genomics-reporting/Bundle/diagnosticreport-pgxexample> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "diagnosticreport-pgxexample"];
+  fhir:Bundle.type [ fhir:value "collection"];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/DiagnosticReport/pgx-report" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/DiagnosticReport/pgx-report>
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Patient/patient" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen>
+  ], [
+     fhir:index 3;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Organization/lab" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>
+  ], [
+     fhir:index 4;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/ServiceRequest/pgx-request" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/ServiceRequest/pgx-request>
+  ], [
+     fhir:index 5;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/med-impact-pgx-example" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/med-impact-pgx-example>
+  ], [
+     fhir:index 6;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/genotype-pgx-example" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/genotype-pgx-example>
+  ], [
+     fhir:index 7;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/haplotype-1-pgx-example" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/haplotype-1-pgx-example>
+  ], [
+     fhir:index 8;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/haplotype-2-pgx-example" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/haplotype-2-pgx-example>
+  ], [
+     fhir:index 9;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/variant-1-pgx-example" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/variant-1-pgx-example>
+  ], [
+     fhir:index 10;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Observation/variant-2-pgx-example" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Observation/variant-2-pgx-example>
+  ], [
+     fhir:index 11;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/MolecularSequence/sequence-1-pgx-example" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/MolecularSequence/sequence-1-pgx-example>
+  ], [
+     fhir:index 12;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/MolecularSequence/sequence-2-pgx-example" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/MolecularSequence/sequence-2-pgx-example>
+  ], [
+     fhir:index 13;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/Task/med-usage-impact-task-pgx-example" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/Task/med-usage-impact-task-pgx-example>
+  ], [
+     fhir:index 14;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/MedicationStatement/current-med-example" ];
+     fhir:Bundle.entry.resource <http://hl7.org/fhir/uv/genomics-reporting/MedicationStatement/current-med-example>
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/DiagnosticReport/pgx-report> a fhir:DiagnosticReport;
+  fhir:Resource.id [ fhir:value "pgx-report"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnosticreport";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnosticreport>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: pgx-report</p><p><b>meta</b>: </p><p><b>basedOn</b>: <a href=\"ServiceRequest/pgx-request\">ServiceRequest/pgx-request</a></p><p><b>status</b>: final</p><p><b>code</b>: Master HL7 genetic variant reporting panel <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '81247-9' = 'Master HL7 genetic variant reporting panel)</span></p><p><b>subject</b>: <a href=\"Patient/patient\">Patient/patient</a></p><p><b>effective</b>: 1 Jan 2016</p><p><b>issued</b>: 6 Mar 2018, 00:00:00</p><p><b>performer</b>: <a href=\"Organization/lab\">Organization/lab</a></p><p><b>result</b>: </p><ul><li><a href=\"Observation/med-impact-pgx-example\">genetics impact for medication metabolism accessment</a></li><li><a href=\"Observation/genotype-pgx-example\">Observation/genotype-pgx-example</a></li><li><a href=\"Observation/haplotype-1-pgx-example\">Observation/haplotype-1-pgx-example</a></li><li><a href=\"Observation/haplotype-2-pgx-example\">Observation/haplotype-2-pgx-example</a></li><li><a href=\"Observation/variant-1-pgx-example\">Observation/variant-1-pgx-example</a></li><li><a href=\"Observation/variant-2-pgx-example\">Observation/variant-2-pgx-example</a></li></ul></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/dr-recommendedAction" ];
+     fhir:Extension.valueReference [
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Task/med-usage-impact-task-pgx-example>;
+       fhir:Reference.reference [ fhir:value "Task/med-usage-impact-task-pgx-example" ]
+     ]
+  ];
+  fhir:DiagnosticReport.basedOn [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/ServiceRequest/pgx-request>;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/pgx-request" ]
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:81247-9;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "81247-9" ]
+     ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2016"^^xsd:gYear];
+  fhir:DiagnosticReport.issued [ fhir:value "2018-03-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:DiagnosticReport.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/med-impact-pgx-example>;
+     fhir:Reference.reference [ fhir:value "Observation/med-impact-pgx-example" ];
+     fhir:Reference.display [ fhir:value "genetics impact for medication metabolism accessment" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/genotype-pgx-example>;
+     fhir:Reference.reference [ fhir:value "Observation/genotype-pgx-example" ]
+  ], [
+     fhir:index 2;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/haplotype-1-pgx-example>;
+     fhir:Reference.reference [ fhir:value "Observation/haplotype-1-pgx-example" ]
+  ], [
+     fhir:index 3;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/haplotype-2-pgx-example>;
+     fhir:Reference.reference [ fhir:value "Observation/haplotype-2-pgx-example" ]
+  ], [
+     fhir:index 4;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/variant-1-pgx-example>;
+     fhir:Reference.reference [ fhir:value "Observation/variant-1-pgx-example" ]
+  ], [
+     fhir:index 5;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/variant-2-pgx-example>;
+     fhir:Reference.reference [ fhir:value "Observation/variant-2-pgx-example" ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Task/med-usage-impact-task-pgx-example> a fhir:uv, fhir:Task;
+  fhir:Resource.id [ fhir:value "med-usage-impact-task-pgx-example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/task-med-chg";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/task-med-chg>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: med-usage-impact-task-pgx-example</p><p><b>meta</b>: </p><p><b>status</b>: requested</p><p><b>intent</b>: proposal</p><p><b>code</b>: Any Increase does Recommendation Text from the provider <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code 'LA26423-6' = 'Increase dose', given as 'Increase dose'})</span></p><p><b>description</b>: Any Increase does Recommendation Text from the provider</p><p><b>focus</b>: <a href=\"MedicationStatement/current-med-example\">MedicationStatement/current-med-example</a></p><p><b>for</b>: <a href=\"Patient/patient\">Patient/patient</a></p><p><b>reasonReference</b>: <a href=\"Observation/med-impact-pgx-example\">Observation/med-impact-pgx-example</a></p></div>"
+  ];
+  fhir:Task.status [ fhir:value "requested"];
+  fhir:Task.intent [ fhir:value "proposal"];
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA26423-6;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA26423-6" ];
+       fhir:Coding.display [ fhir:value "Increase dose" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Any Increase does Recommendation Text from the provider" ]
+  ];
+  fhir:Task.description [ fhir:value "Any Increase does Recommendation Text from the provider"];
+  fhir:Task.focus [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/MedicationStatement/current-med-example>;
+     fhir:Reference.reference [ fhir:value "MedicationStatement/current-med-example" ]
+  ];
+  fhir:Task.for [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Task.reasonReference [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/med-impact-pgx-example>;
+     fhir:Reference.reference [ fhir:value "Observation/med-impact-pgx-example" ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/ServiceRequest/pgx-request> a fhir:uv, fhir:ServiceRequest;
+  fhir:Resource.id [ fhir:value "pgx-request"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/servicerequest";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/servicerequest>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:ServiceRequest.status [ fhir:value "active"];
+  fhir:ServiceRequest.intent [ fhir:value "original-order"];
+  fhir:ServiceRequest.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:81247-9;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "81247-9" ]
+     ]
+  ];
+  fhir:ServiceRequest.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:ServiceRequest.reasonCode [
+     fhir:index 0;
+     fhir:CodeableConcept.text [ fhir:value "Worried about family planning" ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Patient/patient> a fhir:uv, fhir:Patient;
+  fhir:Resource.id [ fhir:value "patient"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This would contain patient identifiers, demographics, etc.</div>"
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Organization/lab> a fhir:uv, fhir:Organization;
+  fhir:Resource.id [ fhir:value "lab"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Organization.name [ fhir:value "Some lab"] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/med-impact-pgx-example> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "med-impact-pgx-example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-metabolism";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-metabolism>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: med-impact-pgx-example</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/observation-category code 'laboratory' = 'Laboratory)</span></p><p><b>code</b>: Genetic variation's effect on drug metabolism <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '53040-2' = 'Genetic variation's effect on drug metabolism', given as 'Genetic variation's effect on drug metabolism'})</span></p><p><b>subject</b>: <a href=\"Patient/patient\">Patient/patient</a></p><p><b>effective</b>: 1 Jan 2018</p><p><b>issued</b>: 6 Mar 2018, 00:00:00</p><p><b>performer</b>: <a href=\"Organization/lab\">Organization/lab</a></p><p><b>value</b>: Rapid metabolizer <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code 'LA25390-8' = 'Rapid metabolizer', given as 'Rapid metabolizer'})</span></p><p><b>derivedFrom</b>: <a href=\"Observation/genotype-pgx-example\">Observation/genotype-pgx-example</a></p><h3>Components</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Medication assessed <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '51963-7' = 'Medication assessed [ID]', given as 'Medication assessed'})</span></td><td>mercaptopurine <span style=\"background: LightGoldenRodYellow\">(Details : {RxNorm code '103' = 'mercaptopurine', given as 'mercaptopurine'})</span></td></tr></table></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:53040-2;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "53040-2" ];
+       fhir:Coding.display [ fhir:value "Genetic variation's effect on drug metabolism" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2018"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2018-03-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Organization/lab>;
+     fhir:Reference.reference [ fhir:value "Organization/lab" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA25390-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA25390-8" ];
+       fhir:Coding.display [ fhir:value "Rapid metabolizer" ]
+     ]
+  ];
+  fhir:Observation.derivedFrom [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/genotype-pgx-example>;
+     fhir:Reference.reference [ fhir:value "Observation/genotype-pgx-example" ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:51963-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "51963-7" ];
+         fhir:Coding.display [ fhir:value "Medication assessed" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm" ];
+         fhir:Coding.code [ fhir:value "103" ];
+         fhir:Coding.display [ fhir:value "mercaptopurine" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/genotype-pgx-example> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "genotype-pgx-example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-genotype";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-genotype>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: genotype-pgx-example</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/observation-category code 'laboratory' = 'Laboratory)</span></p><p><b>code</b>: genotype display name <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '84413-4' = 'Genotype display name', given as 'genotype display name'})</span></p><p><b>effective</b>: 1 Jan 2018</p><p><b>issued</b>: 6 Mar 2018, 00:00:00</p><p><b>value</b>: CYP2C9 *4/*35B <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.pharmvar.org/ code 'CYP2C9 *4/*35B' = 'CYP2C9 *4/*35B', given as 'CYP2C9 *4/*35B'})</span></p><p><b>specimen</b>: <a href=\"Specimen/specimen\">Specimen/specimen</a></p><p><b>derivedFrom</b>: </p><ul><li><a href=\"Observation/haplotype-1-pgx-example\">Observation/haplotype-1-pgx-example</a></li><li><a href=\"Observation/haplotype-2-pgx-example\">Observation/haplotype-2-pgx-example</a></li></ul><h3>Components</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Gene studied ID <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '48018-6' = 'Gene studied [ID]', given as 'Gene studied ID'})</span></td><td>CYP2C9 <span style=\"background: LightGoldenRodYellow\">(Details : {http://www.genenames.org code '2623' = '2623', given as 'CYP2C9'})</span></td></tr></table></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:84413-4;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "84413-4" ];
+       fhir:Coding.display [ fhir:value "genotype display name" ]
+     ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2018"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2018-03-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://www.pharmvar.org/" ];
+       fhir:Coding.code [ fhir:value "CYP2C9 *4/*35B" ];
+       fhir:Coding.display [ fhir:value "CYP2C9 *4/*35B" ]
+     ]
+  ];
+  fhir:Observation.specimen [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen>;
+     fhir:Reference.reference [ fhir:value "Specimen/specimen" ]
+  ];
+  fhir:Observation.derivedFrom [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/haplotype-1-pgx-example>;
+     fhir:Reference.reference [ fhir:value "Observation/haplotype-1-pgx-example" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/haplotype-2-pgx-example>;
+     fhir:Reference.reference [ fhir:value "Observation/haplotype-2-pgx-example" ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48018-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48018-6" ];
+         fhir:Coding.display [ fhir:value "Gene studied ID" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.genenames.org" ];
+         fhir:Coding.code [ fhir:value "2623" ];
+         fhir:Coding.display [ fhir:value "CYP2C9" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/haplotype-1-pgx-example> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "haplotype-1-pgx-example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-haplotype";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-haplotype>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: haplotype-1-pgx-example</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/observation-category code 'laboratory' = 'Laboratory)</span></p><p><b>code</b>: Haplotype Name <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '84414-2' = 'Haplotype name', given as 'Haplotype Name'})</span></p><p><b>effective</b>: 1 Jan 2018</p><p><b>issued</b>: 6 Mar 2018, 00:00:00</p><p><b>value</b>: CYP2C9 *35B <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.pharmvar.org/ code 'CYP2C9 *35B' = 'CYP2C9 *35B', given as 'CYP2C9 *35B'})</span></p><p><b>specimen</b>: <a href=\"Specimen/specimen\">Specimen/specimen</a></p><p><b>derivedFrom</b>: <a href=\"Observation/variant-1-pgx-example\">Observation/variant-1-pgx-example</a></p><h3>Components</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Gene studied ID <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '48018-6' = 'Gene studied [ID]', given as 'Gene studied ID'})</span></td><td>CYP2C9 <span style=\"background: LightGoldenRodYellow\">(Details : {http://www.genenames.org code '2623' = '2623', given as 'CYP2C9'})</span></td></tr></table></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:84414-2;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "84414-2" ];
+       fhir:Coding.display [ fhir:value "Haplotype Name" ]
+     ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2018"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2018-03-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://www.pharmvar.org/" ];
+       fhir:Coding.code [ fhir:value "CYP2C9 *35B" ];
+       fhir:Coding.display [ fhir:value "CYP2C9 *35B" ]
+     ]
+  ];
+  fhir:Observation.specimen [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen>;
+     fhir:Reference.reference [ fhir:value "Specimen/specimen" ]
+  ];
+  fhir:Observation.derivedFrom [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/variant-1-pgx-example>;
+     fhir:Reference.reference [ fhir:value "Observation/variant-1-pgx-example" ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48018-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48018-6" ];
+         fhir:Coding.display [ fhir:value "Gene studied ID" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.genenames.org" ];
+         fhir:Coding.code [ fhir:value "2623" ];
+         fhir:Coding.display [ fhir:value "CYP2C9" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/haplotype-2-pgx-example> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "haplotype-2-pgx-example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-haplotype";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-haplotype>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: haplotype-2-pgx-example</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/observation-category code 'laboratory' = 'Laboratory)</span></p><p><b>code</b>: Haplotype Name <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '84414-2' = 'Haplotype name', given as 'Haplotype Name'})</span></p><p><b>effective</b>: 1 Jan 2018</p><p><b>issued</b>: 6 Mar 2018, 00:00:00</p><p><b>value</b>: CYP2C9 *4 <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.pharmvar.org/ code 'CYP2C9 *4' = 'CYP2C9 *4', given as 'CYP2C9 *4'})</span></p><p><b>specimen</b>: <a href=\"Specimen/specimen\">Specimen/specimen</a></p><p><b>derivedFrom</b>: <a href=\"Observation/variant-2-pgx-example\">Observation/variant-2-pgx-example</a></p><h3>Components</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Gene studied ID <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '48018-6' = 'Gene studied [ID]', given as 'Gene studied ID'})</span></td><td>CYP2C9 <span style=\"background: LightGoldenRodYellow\">(Details : {http://www.genenames.org code '2623' = '2623', given as 'CYP2C9'})</span></td></tr></table></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:84414-2;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "84414-2" ];
+       fhir:Coding.display [ fhir:value "Haplotype Name" ]
+     ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2018"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2018-03-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://www.pharmvar.org/" ];
+       fhir:Coding.code [ fhir:value "CYP2C9 *4" ];
+       fhir:Coding.display [ fhir:value "CYP2C9 *4" ]
+     ]
+  ];
+  fhir:Observation.specimen [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen>;
+     fhir:Reference.reference [ fhir:value "Specimen/specimen" ]
+  ];
+  fhir:Observation.derivedFrom [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Observation/variant-2-pgx-example>;
+     fhir:Reference.reference [ fhir:value "Observation/variant-2-pgx-example" ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48018-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48018-6" ];
+         fhir:Coding.display [ fhir:value "Gene studied ID" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.genenames.org" ];
+         fhir:Coding.code [ fhir:value "2623" ];
+         fhir:Coding.display [ fhir:value "CYP2C9" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/variant-1-pgx-example> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "variant-1-pgx-example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-described-variant";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-described-variant>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: variant-1-pgx-example</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/observation-category code 'laboratory' = 'Laboratory)</span></p><p><b>code</b>: Genetic variant assessment <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code 'TBD-Described' = 'TBD-Described', given as 'Genetic variant assessment'})</span></p><p><b>effective</b>: 1 Jan 2018</p><p><b>issued</b>: 6 Mar 2018, 00:00:00</p><p><b>value</b>: Present <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code 'LA9633-4' = 'Present', given as 'Present'})</span></p><p><b>specimen</b>: <a href=\"Specimen/specimen\">Specimen/specimen</a></p><p><b>derivedFrom</b>: <a href=\"MolecularSequence/sequence-1-pgx-example\">MolecularSequence/sequence-1-pgx-example</a></p><blockquote><p><b>component</b></p><p><b>code</b>: Gene studied ID <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '48018-6' = 'Gene studied [ID]', given as 'Gene studied ID'})</span></p><p><b>value</b>: CYP2C9 <span style=\"background: LightGoldenRodYellow\">(Details : {http://www.genenames.org code '2623' = '2623', given as 'CYP2C9'})</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Genomic reference sequence ID <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '48013-7' = 'Genomic reference sequence [ID]', given as 'Genomic reference sequence ID'})</span></p><p><b>value</b>: NG_007726.3 <span style=\"background: LightGoldenRodYellow\">(Details : {http://www.ncbi.nlm.nih.gov/nuccore code 'NG_007726.3' = 'NG_007726.3)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: dbSNP ID <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '81255-2' = 'dbSNP [ID]', given as 'dbSNP ID'})</span></p><p><b>value</b>: rs12345 <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ncbi.nlm.nih.gov/SNP/ code 'rs12345' = 'rs12345)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Ref nucleotide <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '69547-8' = 'Genomic ref allele [ID]', given as 'Ref nucleotide'})</span></p><p><b>value</b>: T</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Alt allele <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '69551-0' = 'Genomic alt allele [ID]', given as 'Alt allele'})</span></p><p><b>value</b>: G</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Genomic Allele start-end <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '81254-5' = 'Genomic allele start-end', given as 'Genomic Allele start-end'})</span></p><p><b>value</b>: 55227976-55227977</p></blockquote></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:TBD-DESCRIBED;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "TBD-Described" ];
+       fhir:Coding.display [ fhir:value "Genetic variant assessment" ]
+     ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2018"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2018-03-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA9633-4;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA9633-4" ];
+       fhir:Coding.display [ fhir:value "Present" ]
+     ]
+  ];
+  fhir:Observation.specimen [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen>;
+     fhir:Reference.reference [ fhir:value "Specimen/specimen" ]
+  ];
+  fhir:Observation.derivedFrom [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/MolecularSequence/sequence-1-pgx-example>;
+     fhir:Reference.reference [ fhir:value "MolecularSequence/sequence-1-pgx-example" ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48018-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48018-6" ];
+         fhir:Coding.display [ fhir:value "Gene studied ID" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.genenames.org" ];
+         fhir:Coding.code [ fhir:value "2623" ];
+         fhir:Coding.display [ fhir:value "CYP2C9" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48013-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48013-7" ];
+         fhir:Coding.display [ fhir:value "Genomic reference sequence ID" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.ncbi.nlm.nih.gov/nuccore" ];
+         fhir:Coding.code [ fhir:value "NG_007726.3" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81255-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81255-2" ];
+         fhir:Coding.display [ fhir:value "dbSNP ID" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ncbi.nlm.nih.gov/SNP/" ];
+         fhir:Coding.code [ fhir:value "rs12345" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:69547-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "69547-8" ];
+         fhir:Coding.display [ fhir:value "Ref nucleotide" ]
+       ]
+     ];
+     fhir:Observation.component.valueString [ fhir:value "T" ]
+  ], [
+     fhir:index 4;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:69551-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "69551-0" ];
+         fhir:Coding.display [ fhir:value "Alt allele" ]
+       ]
+     ];
+     fhir:Observation.component.valueString [ fhir:value "G" ]
+  ], [
+     fhir:index 5;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81254-5;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81254-5" ];
+         fhir:Coding.display [ fhir:value "Genomic Allele start-end" ]
+       ]
+     ];
+     fhir:Observation.component.valueRange [
+       fhir:Range.low [
+         fhir:Quantity.value [ fhir:value "55227976"^^xsd:decimal ]
+       ];
+       fhir:Range.high [
+         fhir:Quantity.value [ fhir:value "55227977"^^xsd:decimal ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Observation/variant-2-pgx-example> a fhir:uv, fhir:Observation;
+  fhir:Resource.id [ fhir:value "variant-2-pgx-example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-described-variant";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/obs-described-variant>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: variant-2-pgx-example</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/observation-category code 'laboratory' = 'Laboratory)</span></p><p><b>code</b>: Genetic variant assessment <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code 'TBD-Described' = 'TBD-Described', given as 'Genetic variant assessment'})</span></p><p><b>effective</b>: 1 Jan 2018</p><p><b>issued</b>: 6 Mar 2018, 00:00:00</p><p><b>value</b>: Present <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code 'LA9633-4' = 'Present', given as 'Present'})</span></p><p><b>specimen</b>: <a href=\"Specimen/specimen\">Specimen/specimen</a></p><p><b>derivedFrom</b>: <a href=\"MolecularSequence/sequence-2-pgx-example\">MolecularSequence/sequence-2-pgx-example</a></p><blockquote><p><b>component</b></p><p><b>code</b>: Gene studied ID <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '48018-6' = 'Gene studied [ID]', given as 'Gene studied ID'})</span></p><p><b>value</b>: CYP2C9 <span style=\"background: LightGoldenRodYellow\">(Details : {http://www.genenames.org code '2623' = '2623', given as 'CYP2C9'})</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Genomic reference sequence ID <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '48013-7' = 'Genomic reference sequence [ID]', given as 'Genomic reference sequence ID'})</span></p><p><b>value</b>: NG_007726.3 <span style=\"background: LightGoldenRodYellow\">(Details : {http://www.ncbi.nlm.nih.gov/nuccore code 'NG_007726.3' = 'NG_007726.3)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: dbSNP ID <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '81255-2' = 'dbSNP [ID]', given as 'dbSNP ID'})</span></p><p><b>value</b>: rs233455 <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ncbi.nlm.nih.gov/SNP/ code 'rs233455' = 'rs233455)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Ref nucleotide <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '69547-8' = 'Genomic ref allele [ID]', given as 'Ref nucleotide'})</span></p><p><b>value</b>: T</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Alt allele <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '69551-0' = 'Genomic alt allele [ID]', given as 'Alt allele'})</span></p><p><b>value</b>: G</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Genomic Allele start-end <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '81254-5' = 'Genomic allele start-end', given as 'Genomic Allele start-end'})</span></p><p><b>value</b>: 55227978-55227979</p></blockquote></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:TBD-DESCRIBED;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "TBD-Described" ];
+       fhir:Coding.display [ fhir:value "Genetic variant assessment" ]
+     ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2018"^^xsd:gYear];
+  fhir:Observation.issued [ fhir:value "2018-03-06T00:00:00-05:00"^^xsd:dateTime];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA9633-4;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA9633-4" ];
+       fhir:Coding.display [ fhir:value "Present" ]
+     ]
+  ];
+  fhir:Observation.specimen [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen>;
+     fhir:Reference.reference [ fhir:value "Specimen/specimen" ]
+  ];
+  fhir:Observation.derivedFrom [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/MolecularSequence/sequence-2-pgx-example>;
+     fhir:Reference.reference [ fhir:value "MolecularSequence/sequence-2-pgx-example" ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48018-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48018-6" ];
+         fhir:Coding.display [ fhir:value "Gene studied ID" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.genenames.org" ];
+         fhir:Coding.code [ fhir:value "2623" ];
+         fhir:Coding.display [ fhir:value "CYP2C9" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48013-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48013-7" ];
+         fhir:Coding.display [ fhir:value "Genomic reference sequence ID" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.ncbi.nlm.nih.gov/nuccore" ];
+         fhir:Coding.code [ fhir:value "NG_007726.3" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81255-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81255-2" ];
+         fhir:Coding.display [ fhir:value "dbSNP ID" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ncbi.nlm.nih.gov/SNP/" ];
+         fhir:Coding.code [ fhir:value "rs233455" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:69547-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "69547-8" ];
+         fhir:Coding.display [ fhir:value "Ref nucleotide" ]
+       ]
+     ];
+     fhir:Observation.component.valueString [ fhir:value "T" ]
+  ], [
+     fhir:index 4;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:69551-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "69551-0" ];
+         fhir:Coding.display [ fhir:value "Alt allele" ]
+       ]
+     ];
+     fhir:Observation.component.valueString [ fhir:value "G" ]
+  ], [
+     fhir:index 5;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:81254-5;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "81254-5" ];
+         fhir:Coding.display [ fhir:value "Genomic Allele start-end" ]
+       ]
+     ];
+     fhir:Observation.component.valueRange [
+       fhir:Range.low [
+         fhir:Quantity.value [ fhir:value "55227978"^^xsd:decimal ]
+       ];
+       fhir:Range.high [
+         fhir:Quantity.value [ fhir:value "55227979"^^xsd:decimal ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/Specimen/specimen> a fhir:Specimen;
+  fhir:Resource.id [ fhir:value "specimen"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/specimen";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/specimen>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:Specimen.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/MolecularSequence/sequence-1-pgx-example> a fhir:uv, fhir:MolecularSequence;
+  fhir:Resource.id [ fhir:value "sequence-1-pgx-example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: sequence-1-pgx-example</p><p><b>type</b>: dna</p><p><b>coordinateSystem</b>: 0</p><h3>ReferenceSeqs</h3><table class=\"grid\"><tr><td>-</td><td><b>Orientation</b></td><td><b>ReferenceSeqId</b></td><td><b>WindowStart</b></td><td><b>WindowEnd</b></td></tr><tr><td>*</td><td>sense</td><td>NG-007726.3 <span style=\"background: LightGoldenRodYellow\">(Details : {http://www.ncbi.nlm.nih.gov/nuccore code 'NG-007726.3' = 'NG-007726.3)</span></td><td>55227970</td><td>55227980</td></tr></table></div>"
+  ];
+  fhir:MolecularSequence.type [ fhir:value "dna"];
+  fhir:MolecularSequence.coordinateSystem [ fhir:value "0"^^xsd:integer];
+  fhir:MolecularSequence.referenceSeq [
+     fhir:MolecularSequence.referenceSeq.orientation [ fhir:value "sense" ];
+     fhir:MolecularSequence.referenceSeq.referenceSeqId [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.ncbi.nlm.nih.gov/nuccore" ];
+         fhir:Coding.code [ fhir:value "NG-007726.3" ]
+       ]
+     ];
+     fhir:MolecularSequence.referenceSeq.windowStart [ fhir:value "55227970"^^xsd:integer ];
+     fhir:MolecularSequence.referenceSeq.windowEnd [ fhir:value "55227980"^^xsd:integer ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/MolecularSequence/sequence-2-pgx-example> a fhir:uv, fhir:MolecularSequence;
+  fhir:Resource.id [ fhir:value "sequence-2-pgx-example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: sequence-2-pgx-example</p><p><b>type</b>: dna</p><p><b>coordinateSystem</b>: 0</p><h3>ReferenceSeqs</h3><table class=\"grid\"><tr><td>-</td><td><b>Orientation</b></td><td><b>ReferenceSeqId</b></td><td><b>WindowStart</b></td><td><b>WindowEnd</b></td></tr><tr><td>*</td><td>sense</td><td>NG-007726.3 <span style=\"background: LightGoldenRodYellow\">(Details : {http://www.ncbi.nlm.nih.gov/nuccore code 'NG-007726.3' = 'NG-007726.3)</span></td><td>55227970</td><td>55227980</td></tr></table></div>"
+  ];
+  fhir:MolecularSequence.type [ fhir:value "dna"];
+  fhir:MolecularSequence.coordinateSystem [ fhir:value "0"^^xsd:integer];
+  fhir:MolecularSequence.referenceSeq [
+     fhir:MolecularSequence.referenceSeq.orientation [ fhir:value "sense" ];
+     fhir:MolecularSequence.referenceSeq.referenceSeqId [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.ncbi.nlm.nih.gov/nuccore" ];
+         fhir:Coding.code [ fhir:value "NG-007726.3" ]
+       ]
+     ];
+     fhir:MolecularSequence.referenceSeq.windowStart [ fhir:value "55227970"^^xsd:integer ];
+     fhir:MolecularSequence.referenceSeq.windowEnd [ fhir:value "55227980"^^xsd:integer ]
+  ] .
+
+<http://hl7.org/fhir/uv/genomics-reporting/MedicationStatement/current-med-example> a fhir:uv, fhir:MedicationStatement;
+  fhir:Resource.id [ fhir:value "current-med-example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medicationstatement";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/medicationstatement>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: current-med-example</p><p><b>meta</b>: </p><p><b>status</b>: unknown</p><p><b>medication</b>: mercaptopurine <span style=\"background: LightGoldenRodYellow\">(Details : {RxNorm code '103' = 'mercaptopurine', given as 'mercaptopurine'})</span></p><p><b>subject</b>: <a href=\"Patient/patient\">Patient/patient</a></p></div>"
+  ];
+  fhir:MedicationStatement.status [ fhir:value "unknown"];
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm" ];
+       fhir:Coding.code [ fhir:value "103" ];
+       fhir:Coding.display [ fhir:value "mercaptopurine" ]
+     ]
+  ];
+  fhir:MedicationStatement.subject [
+     fhir:link <http://hl7.org/fhir/uv/genomics-reporting/Patient/patient>;
+     fhir:Reference.reference [ fhir:value "Patient/patient" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/genomics-reporting/Bundle/diagnosticreport-pgxexample.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/uv/genomics-reporting/Bundle/diagnosticreport-pgxexample.ttl> .
+
+# -------------------------------------------------------------------------------------
+

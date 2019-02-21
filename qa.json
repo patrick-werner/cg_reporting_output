@@ -1,0 +1,12 @@
+﻿{
+  "url": "http://hl7.org/fhir/uv/genomics-reporting/ImplementationGuide/genomics-reporting",
+  "name": "GenomicsReporting",
+  "package-id": "hl7.fhir.uv.genomics-reporting",
+  "ig-ver": "0.3",
+  "date": "Thu, 21 Feb, 2019 11:08:00 +0100",
+  "errs": 122,
+  "warnings": 184,
+  "hints": 112,
+  "version": "4.0.0",
+  "tool": "4.0.0 (3)"
+}

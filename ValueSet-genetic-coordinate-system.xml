@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="genetic-coordinate-system"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>GeneticCoordinateSystem</h2><div><p>Base coordinate systems start and end measurements for variants</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="genetic-coordinate-system.html"><code>http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/genetic-coordinate-system</code></a></li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/uv/genomics-reporting/ValueSet/genetic-coordinate-system"/>
+  <version value="0.3"/>
+  <name value="GeneticCoordinateSystem"/>
+  <status value="draft"/>
+  <date value="2019-02-21T11:08:00+01:00"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+    </telecom>
+  </contact>
+  <description value="Base coordinate systems start and end measurements for variants"/>
+  <immutable value="true"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/genetic-coordinate-system"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="genetic-coordinate-system"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>GeneticCoordinateSystem</h2><div><p>Base coordinate systems start and end measurements for variants</p>
+</div><p>This code system http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/genetic-coordinate-system defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">Interval<a name="genetic-coordinate-system-Interval"> </a></td><td>Interval</td><td>0-based numbering or interbase coordinate system, inclusive start, exclusive end</td></tr><tr><td style="white-space:nowrap">Variant method<a name="genetic-coordinate-system-Variantmethod"> </a></td><td>Variant method</td><td>1 for 1-based numbering or base coordinate system, inclusive start, inclusive end</td></tr><tr><td style="white-space:nowrap">Alignment method<a name="genetic-coordinate-system-Alignmentmethod"> </a></td><td>Alignment method</td><td>1-based [inclusive start, inclusive end] - with Variant Method (HGVS-like)</td></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/genetic-coordinate-system"/>
+  <version value="0.3"/>
+  <name value="GeneticCoordinateSystem"/>
+  <status value="draft"/>
+  <date value="2019-02-21T11:08:00+01:00"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+    </telecom>
+  </contact>
+  <description value="Base coordinate systems start and end measurements for variants"/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/uv/genomics-reporting/ValueSet/genetic-coordinate-system"/>
+  <content value="complete"/>
+  <concept>
+    <code value="Interval"/>
+    <display value="Interval"/>
+    <definition value="0-based numbering or interbase coordinate system, inclusive start, exclusive end"/>
+  </concept>
+  <concept>
+    <code value="Variant method"/>
+    <display value="Variant method"/>
+    <definition value="1 for 1-based numbering or base coordinate system, inclusive start, inclusive end"/>
+  </concept>
+  <concept>
+    <code value="Alignment method"/>
+    <display value="Alignment method"/>
+    <definition value="1-based [inclusive start, inclusive end] - with Variant Method (HGVS-like)"/>
+  </concept>
+</CodeSystem>

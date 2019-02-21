@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/genomics-reporting/DiagnosticReport/diagnosticreport-hla-glstring-r4> a fhir:DiagnosticReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "diagnosticreport-hla-glstring-r4"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnosticreport";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnosticreport>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <pre>\nHLA-A,-B,-C genotyping report for sample-id=123456789\n\nLOCUS   ALLELE ASSIGNMENT\nHLA-A   HLA-A*03:01:01:01\n        HLA-A*30:01:01\n\nHLA-B   HLA-B*15:01:01:01\n        HLA-B*40:01:02:01/HLA-B*40:01:02:02/HLA-B*40:01:02:04/HLA-B*40:01:02:06\n\nHLA-C   HLA-C*07:04:01:01/HLA-C*07:04:01:03\n        HLA-C*12:03:01:01/HLA-C*12:03:01:06\n\nAllele assignments based on IMGT/HLA 3.31.0\nEffective date: 2018-07-26\n\nLab: aTypingLab Inc\n           </pre>\n        </div>"
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "GE" ];
+       fhir:Coding.display [ fhir:value "Genetics" ]
+     ]
+  ];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:81247-9;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "81247-9" ];
+       fhir:Coding.display [ fhir:value "Master HL7 genetic variant reporting panel" ]
+     ], [
+       fhir:index 1;
+       a loinc:53767-0;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "53767-0" ];
+       fhir:Coding.display [ fhir:value "HLA-A+B+C SBT [Interpretation] by High resolution" ]
+     ]
+  ];
+  fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2018-07-26"^^xsd:date] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/genomics-reporting/DiagnosticReport/diagnosticreport-hla-glstring-r4.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/uv/genomics-reporting/DiagnosticReport/diagnosticreport-hla-glstring-r4.ttl> .
+
+# -------------------------------------------------------------------------------------
+

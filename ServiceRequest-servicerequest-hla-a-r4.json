@@ -1,0 +1,45 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "servicerequest-hla-a-r4",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/servicerequest"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <pre>High resolution HLA-A typing for sample 001-123456789</pre>\n        </div>"
+  },
+  "identifier": [
+    {
+      "system": "https:/aDonorRegistry.com",
+      "value": "199688.2.1..1.83"
+    }
+  ],
+  "status": "completed",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "108252007",
+          "display": "Laboratory procedure"
+        }
+      ]
+    }
+  ],
+  "priority": "routine",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "57290-9",
+        "display": "HLA-A [Type] by High resolution"
+      }
+    ]
+  },
+  "subject": {
+    "display": "001^246802468"
+  }
+}
